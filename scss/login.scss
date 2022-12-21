@@ -1,0 +1,116 @@
+@import "./setup.scss";
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  &__form {
+    height: 100%;
+    width: 100%;
+    color: #212529;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    > * {
+      width: 500px;
+    }
+
+    h1 {
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+      line-height: 1.2;
+      font-size: 1.75rem;
+      text-transform: capitalize;
+    }
+
+    p:nth-child(2) {
+      color: #b3b3b3;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    input {
+      margin-bottom: 0;
+      border: 1px solid #efefef;
+      padding: 20px 15px;
+      outline: none;
+
+      &:nth-child(3) {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+      }
+      &:nth-child(4) {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        margin-bottom: 20px;
+      }
+    }
+
+    button {
+      height: 54px;
+      padding-left: 30px;
+      padding-right: 30px;
+      text-transform: capitalize;
+      display: inline-block;
+      font-weight: 400;
+      color: #212529;
+      text-align: center;
+      background-color: transparent;
+      border: 1px solid transparent;
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:nth-child(5) {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+
+        &:hover {
+          background-color: #0069d9;
+          border-color: #0062cc;
+        }
+      }
+
+      &:last-child {
+        background: #ea4335;
+        color: #fff;
+
+        &:hover {
+          background: #e82e1e;
+        }
+
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    p:nth-child(6) {
+      margin: 10px 0;
+      text-align: center;
+      color: #6c757d;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    background-image: url("https://preview.colorlib.com/theme/bootstrap/login-form-06/images/bg_1.jpg.webp");
+    background-position: center;
+  }
+
+  .g-signin2 {
+    .abcRioButton.abcRioButtonLightBlue {
+      width: 100% !important;
+      background: #ea4335 !important;
+      color: #fff !important;
+    }
+  }
+}

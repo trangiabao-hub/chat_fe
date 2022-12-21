@@ -25,9 +25,13 @@
           <span>Tran Gia Bao</span>
         </div>
 
-        <div class="chat-list__search">
-          <i class="fa fa-search"></i>
-          <input type="text" placeholder="People or Group" />
+        <div class="chat-list__control-center">
+          <div class="chat-list__search">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="People or Group" />
+          </div>
+
+          <i class="fa fa-users" id="btnAddChat"></i>
         </div>
 
         <div class="chat-list__items">
@@ -331,104 +335,37 @@
         <div class="chat-detail__messages">
           <div class="message me">
             <div class="message__detail">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              pariatur!
+              <div class="message__detail__avatar">
+                <img
+                  src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-hai-1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="message__detail__text">
+                <div class="info">nguyengocba, 5:17 PM</div>
+                <div class="text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Nesciunt soluta error aliquam labore voluptates eos.
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="message">
             <div class="message__detail">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              pariatur!
-            </div>
-          </div>
-
-          <div class="message me">
-            <div class="message__detail">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              pariatur!
-            </div>
-          </div>
-
-          <div class="message">
-            <div class="message__detail">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              pariatur!
-            </div>
-          </div>
-
-          <div class="message me">
-            <div class="message__detail">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              pariatur!
-            </div>
-          </div>
-          <div class="message me">
-            <div class="message__detail">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              pariatur!
-            </div>
-          </div>
-          <div class="message me">
-            <div class="message__detail">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              pariatur!
-            </div>
-          </div>
-          <div class="message me">
-            <div class="message__detail">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              pariatur!
-            </div>
-          </div>
-
-          <div class="message">
-            <div class="message__detail">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              pariatur!
-            </div>
-          </div>
-          <div class="message">
-            <div class="message__detail">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              pariatur!
-            </div>
-          </div>
-          <div class="message">
-            <div class="message__detail">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              pariatur!
-            </div>
-          </div>
-
-          <div class="message me">
-            <div class="message__detail">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              pariatur!
-            </div>
-          </div>
-          <div class="message me">
-            <div class="message__detail">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              pariatur!
-            </div>
-          </div>
-          <div class="message me">
-            <div class="message__detail">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              pariatur!
-            </div>
-          </div>
-          <div class="message me">
-            <div class="message__detail">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              pariatur!
-            </div>
-          </div>
-          <div class="message me">
-            <div class="message__detail">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-              pariatur!
+              <div class="message__detail__avatar">
+                <img
+                  src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-hai-1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="message__detail__text">
+                <div class="info">nguyengocba, 5:17 PM</div>
+                <div class="text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Nesciunt soluta error aliquam labore voluptates eos.
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -438,5 +375,14 @@
         </div>
       </div>
     </div>
+
+    <div class="pop-up" id="popUp">
+      <div class="pop-up__overlay"></div>
+      <div class="pop-up__form">
+        <h3>Tạo nhóm</h3>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
   </body>
 </html>
