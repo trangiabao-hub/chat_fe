@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="google-signin-client_id"
+      content="233707672502-t92c9697ga75uqddtk0jkhnj72lp8873.apps.googleusercontent.com"
+    />
+    <link
+      rel="icon"
+      href="https://play-lh.googleusercontent.com/W_cgeKYjrIw6WLR7g7GJvjX9gotjS6k2CWODyULgjEBvaTf5XDmmGCTBVH9v2zfqKv8"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/signup.css" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="signup">
+      <div class="signup__form">
+        <h1>Sign up</h1>
+        <p>
+          Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur
+          adipisicing.
+        </p>
+
+        <input type="email" placeholder="Email" id="txtEmail" />
+        <input type="fullname" placeholder="Full name" id="txtFullName" />
+        <input type="text" placeholder="Username" id="txtUsername" />
+        <input type="password" placeholder="Password" id="txtPassword" />
+        <button onclick="signUp()">Sign up</button>
+
+        <p>— or —</p>
+
+        <script
+          src="https://accounts.google.com/gsi/client"
+          async
+          defer
+        ></script>
+        <div
+          id="g_id_onload"
+          data-client_id="233707672502-t92c9697ga75uqddtk0jkhnj72lp8873.apps.googleusercontent.com"
+          data-auto_prompt="false"
+          data-callback="handleLogin"
+        ></div>
+        <div
+          class="g_id_signin"
+          data-type="standard"
+          data-size="large"
+          data-theme="outline"
+          data-text="sign_in_with"
+          data-shape="rectangular"
+          data-logo_alignment="left"
+        ></div>
+      </div>
+      <div class="signup__image"></div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"
+      integrity="sha512-QTnb9BQkG4fBYIt9JGvYmxPpd6TBeKp6lsUrtiVQsrJ9sb33Bn9s0wMQO9qVBFbPX3xHRAsBHvXlcsrnJjExjg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../js//signup.js"></script>
+  </body>
+</html>
