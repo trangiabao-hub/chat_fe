@@ -63,4 +63,22 @@ const sentMessage = () => {
   stomp.send("/app/room", {}, message);
 };
 
+const checkLogin = () => {
+  const account = JSON.parse(localStorage.getItem("account"));
+  if (account != null) {
+    const html = `
+      <img
+      src="${account.picture}"
+      alt=""
+    />
+    <span>${account.fullName}</span>
+    `;
+
+    document.getElementById("information").innerHTML = html;
+  } else {
+    window.location.href = "/pages/login.html";
+  }
+};
+
+checkLogin();
 connect();

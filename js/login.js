@@ -4,15 +4,19 @@ function handleLogin(token) {
   // Đẩy token xuống BE
   // nhờ axios tạo 1 cái request xuống BE
 
-  const url = "http://localhost:6970/verify";
+  const url = "http://localhost:6969/login-gg";
   const data = {
-    tokenid: token.credential,
+    id: token.credential,
   };
 
   axios
     .post(url, data)
-    .then(function (response) {
-      console.log(response.data);
+    .then((response) => {
+      if (response.data != null) {
+        // account chuan
+        localStorage.setItem("account", JSON.stringify(response.data.data));
+        window.location.href = "/";
+      }
     })
     .catch(function (error) {
       console.log(error);
