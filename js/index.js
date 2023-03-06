@@ -3,10 +3,11 @@
 const DOMAIN = "http://localhost:6969";
 const END_POINT = "/web-socket";
 
-let addButton, popUpElement;
+let addButton, popUpElement, inputSearch;
 //DOM
 addButton = document.getElementById("btnAddChat");
 popUpElement = document.getElementById("popUp");
+inputSearch = document.getElementById("inputSearch");
 
 // tham số 1: type
 // tham số 2: hành động tương ứng
@@ -16,6 +17,46 @@ addButton.addEventListener("click", function () {
 
 popUpElement.addEventListener("click", function () {
   hidePopUp();
+});
+
+inputSearch.addEventListener("input", (e) => {
+  const value = e.target.value;
+  const chatList = document.getElementById("chatList");
+  const accountList = document.getElementById("accountList");
+  if (value == "") {
+    chatList.style.display = "block";
+    accountList.style.display = "none";
+  } else {
+    chatList.style.display = "none";
+    accountList.style.display = "block";
+
+    axios
+      .get(`http://localhost:6969/account/${value}`)
+      .then((response) => {
+        const data = response.data.data;
+        if (data.length > 0) {
+          let html = "";
+          data.forEach((element) => {
+            html += `          
+            <div class="item">
+              <img
+                src="${element.picture}"
+                alt=""
+              />
+              <div class="item__detail">
+                <h4>${element.fullName}</h4>
+                <span>${element.email}</span>
+              </div>
+            </div>`;
+          });
+
+          accountList.innerHTML = html;
+        } else {
+          accountList.innerHTML = "<p>No data</p>";
+        }
+      })
+      .catch();
+  }
 });
 
 function showPopUp() {

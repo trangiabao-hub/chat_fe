@@ -55,7 +55,17 @@
       }
     }
 
-    &__items {
+    &__accounts {
+      display: none;
+
+      > p {
+        text-align: center;
+        color: #333;
+      }
+    }
+
+    &__items,
+    &__accounts {
       margin-top: 20px;
       flex-grow: 1;
       overflow-y: scroll;

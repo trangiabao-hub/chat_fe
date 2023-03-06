@@ -22,13 +22,13 @@
         <div class="chat-list__control-center">
           <div class="chat-list__search">
             <i class="fa fa-search"></i>
-            <input type="text" placeholder="People or Group" />
+            <input type="text" placeholder="People or Group" id="inputSearch" />
           </div>
 
           <i class="fa fa-users" id="btnAddChat"></i>
         </div>
 
-        <div class="chat-list__items">
+        <div class="chat-list__items" id="chatList">
           <div class="item">
             <img
               src="https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-hai-1.jpg"
@@ -40,6 +40,8 @@
             </div>
           </div>
         </div>
+
+        <div class="chat-list__accounts" id="accountList"></div>
       </div>
       <div class="chat-detail">
         <div class="chat-detail__header">
@@ -76,6 +78,12 @@
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"
       integrity="sha512-iKDtgDyTHjAitUDdLljGhenhPwrbBfqTKWO1mkhSFH3A7blITC9MhYon6SjnMhp4o0rADGw9yAC6EW4t5a4K3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"
+      integrity="sha512-QTnb9BQkG4fBYIt9JGvYmxPpd6TBeKp6lsUrtiVQsrJ9sb33Bn9s0wMQO9qVBFbPX3xHRAsBHvXlcsrnJjExjg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>

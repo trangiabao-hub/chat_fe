@@ -73,37 +73,44 @@
   color: #fff;
   font-size: 12px;
 }
-.container .chat-list__items {
+.container .chat-list__accounts {
+  display: none;
+}
+.container .chat-list__accounts > p {
+  text-align: center;
+  color: #333;
+}
+.container .chat-list__items, .container .chat-list__accounts {
   margin-top: 20px;
   flex-grow: 1;
   overflow-y: scroll;
 }
-.container .chat-list__items .item {
+.container .chat-list__items .item, .container .chat-list__accounts .item {
   display: flex;
   align-items: center;
   padding: 10px 20px;
   cursor: pointer;
   transition: all 0.3s;
 }
-.container .chat-list__items .item:hover {
+.container .chat-list__items .item:hover, .container .chat-list__accounts .item:hover {
   background-color: #111;
 }
-.container .chat-list__items .item img {
+.container .chat-list__items .item img, .container .chat-list__accounts .item img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   margin-right: 10px;
 }
-.container .chat-list__items .item__detail {
+.container .chat-list__items .item__detail, .container .chat-list__accounts .item__detail {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.container .chat-list__items .item__detail h4 {
+.container .chat-list__items .item__detail h4, .container .chat-list__accounts .item__detail h4 {
   color: #b2b2b2;
   margin-bottom: 4px;
 }
-.container .chat-list__items .item__detail span {
+.container .chat-list__items .item__detail span, .container .chat-list__accounts .item__detail span {
   display: block;
   font-size: 12px;
   color: #696969;
